@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style1.css"/>
+    <script type="text/javascript" src="dist/vis.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/index_style.css"/>
     <meta charset="UTF-8">
-    <title>An HTML Page</title>
-    <div> try this</div>
+    <title>Myers @ Technion</title>
+    <style type="text/css">
+        #mynetwork {
+            width: 700px;
+            height: 400px;
+            border: 2px solid #1c8b71;
+        }
+    </style>
 </head>
 <body>
-<p>push the <em> link below</em> to go to the other page </p>
-<h1 id="hdr1"><a href="hell2.html" > Hello World Wide Web!</a> </h1>
+<h1> Name: Omri Myers</h1>
+<h2></h2>
+<h3></h3>
+<p class="email"> Email: myers@campus.technion.ac.il</p>
+
+
+    <h4>HTML5 Tutorials:</h4>
+    <h6> &bull;<a href="http://www.html-5-tutorial.com/" target="_blank"> First HTML Tutorial</a></h6>
+    <h6>&bull;<a href="http://www.html5andcss3.org/html5history.php" target="_blank"> Second HTML Tutorial</a></h6>
+    <h6>&bull;<a href="http://www.w3schools.com/html/" target="_blank"> Third HTML Tutorial</a></h6>
+    <h6>&bull;<a href="https://www.youtube.com/watch?v=kDyJN7qQETA" target="_blank"> Video Tutorial</a></h6>
+    <h4>CSS3 Tutorials:</h4>
+    <h6>&bull;<a href="http://www.w3schools.com/css/" target="_blank"> First CSS3 Tutorial</a></h6>
+    <h6>&bull;<a href="http://www.css3-tutorial.net/" target="_blank"> Second CSS3 Tutorial</a></h6>
+    <h6>&bull;<a href="https://www.youtube.com/watch?v=CUxH_rWSI1k" target="_blank"> Video CSS3 Tutorial</a></h6>
+    <h4> A link to a mirror HTML with different style:</h4>
+    <h6>&bull;<a href="pages/index2.html/" target="_blank"> Mirror page</a></h6>
+    <h4> Social Networks:</h4>
+    <h6>&bull;<a href="https://il.linkedin.com/in/omri-myers-197ab497" target="_blank"> LinkedIn profile</a></h6>
+    <h6>&bull;<a href="https://github.com/Myers-Omri" target="_blank"> GitHub account</a></h6>
+<h4> Curriculum Vitae (PDF):</h4>
+<h6>&bull;<a href="files/CV-Omri%20Myers-May16.pdf" target="_blank"> LinkedIn profile</a></h6>
+
+<div id='mynetwork'>
+    <div class="vis network-frame" style="position: relative; overflow: hidden; -webkit-user-select: none; touch-action: pan-y;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    // create an array with nodes
+    var nodes = [
+        {id: 1, label: 'Dad'},
+        {id: 2, label: 'Mom'},
+        {id: 3, label: 'Me'},
+        {id: 4, label: 'Matan'},
+        {id: 5, label: 'Noam'}
+    ];
+
+    // create an array with edges
+    var edges = [
+        {from: 1, to: 2, arrows:'to, from', dashes:true},
+        {from: 1, to: 3, arrows:'to'},
+        {from: 2, to: 3, arrows:'to'},
+        {from: 1, to: 4, arrows:'to'},
+        {from: 2, to: 4, arrows:'to'},
+
+        {from: 4, to: 5,dashes:true}
+
+    ];
+
+    // create a network
+    var container = document.getElementById('mynetwork');
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+    var options = {};
+    var network = new vis.Network(container, data, options);
+</script>
+
 </body>
 </html>

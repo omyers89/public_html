@@ -1,0 +1,18 @@
+@import url(../dist/vis.css);
+body{
+    background-color: #ff96a7;
+}
+h1{
+    color: darkcyan;
+    font-family: "cursive";
+}
+p.email{
+font-style: italic;
+}
+
+h6{
+    margin-left: 4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: medium;
+}
